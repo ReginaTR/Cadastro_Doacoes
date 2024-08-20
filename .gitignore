@@ -46,3 +46,6 @@ tmp/
 
 /node_modules
 >>>>>>> origin/main
+
+
+config/secrets.yml
