@@ -1,0 +1,38 @@
+<article id="<%= dom_id institution %>" class="py-6 prose dark:prose-invert">
+    <p class="mb-0 font-semibold">
+      Name
+    </p>
+    <p class="my-0">
+      <%= institution.name %>
+    </p>
+    <p class="mb-0 font-semibold">
+      Email
+    </p>
+    <p class="my-0">
+      <%= institution.email %>
+    </p>
+    <p class="mb-0 font-semibold">
+      Cnpj
+    </p>
+    <p class="my-0">
+      <%= institution.cnpj %>
+    </p>
+    <p class="mb-0 font-semibold">
+      Address
+    </p>
+    <p class="my-0">
+      <%= institution.address %>
+    </p>
+    <p class="mb-0 font-semibold">
+      Phone
+    </p>
+    <p class="my-0">
+      <%= institution.phone %>
+    </p>
+
+   <p>
+    <%= link_to "View Institution", institution, class: "underline" %>
+  </p>
+
+  <time class="text-slate-600 dark:text-slate-400 text-xs mt-2" datetime="<%= institution.created_at.to_formatted_s(:long) %>">Created <%= time_ago_in_words(institution.created_at) + " ago" %></time>
+</article>
