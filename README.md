@@ -1,2 +1,24 @@
-# Cadastro_Doacoes
-Esse projeto tem como objetivo criar um programa o qual a instiuição de caridade cadastre os produtos que estão precisando com mais urgência para que as pessoas possam acompanhar e realizar as suas doações para essas instituições.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running..
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
