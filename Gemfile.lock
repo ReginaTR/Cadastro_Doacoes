@@ -302,6 +302,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  devise
   image_processing (~> 1.2)
   jbuilder
   pg (~> 1.1)
