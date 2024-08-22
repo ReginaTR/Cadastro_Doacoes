@@ -310,4 +310,14 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
+  # ==> Configuration for :authentication_keys
+  # Configure which key(s) should be used when authenticating a user. By default,
+  # :email is used.
+  config.authentication_keys = [:email]
+
+  # ==> Configuration for :sign_in_after_change_password
+  # The default is true. You can set it to false if you want to force the user to sign in again after
+  # changing their password. The user will be signed out automatically after changing their password.
+  config.sign_in_after_change_password = true
 end

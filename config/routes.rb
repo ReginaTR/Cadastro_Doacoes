@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
-  devise_for :institutions
+  devise_scope :user do
+    root to: 'devise/sessions#new'
+  end
+
   resources :institutions
-	get 'about', to: 'page#about'
+
+  get 'about', to: 'page#about'
+
   if Rails.env.development? || Rails.env.test?
     mount Railsui::Engine, at: "/railsui"
   end
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   # Inherits from Railsui::PageController#index
   # To overide, add your own page#index view or change to a new root
   # Visit the start page for Rails UI any time at /railsui/start
-  root to: "institutions#index"
+
 
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

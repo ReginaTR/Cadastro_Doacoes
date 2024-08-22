@@ -1674,3 +1674,172 @@ Processing by InstitutionsController#new as HTML
 Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 31857)
 
 
+Started GET "/" for 127.0.0.1 at 2024-08-22 16:48:18 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.6ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 686)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 7.6ms | Allocations: 5914)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.2ms | Allocations: 4111)
+  Rendered shared/_nav.html.erb (Duration: 5.4ms | Allocations: 4179)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.9ms | Allocations: 1974)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 15523)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.6ms | Allocations: 15765)
+
+
+Started GET "/institutions/new" for 127.0.0.1 at 2024-08-22 16:48:23 -0300
+Processing by InstitutionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered institutions/_form.html.erb (Duration: 1.9ms | Allocations: 1312)
+  Rendered institutions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1409)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 4.8ms | Allocations: 5898)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 3.6ms | Allocations: 4110)
+  Rendered shared/_nav.html.erb (Duration: 3.7ms | Allocations: 4178)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.0ms | Allocations: 1974)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 16040)
+Completed 200 OK in 16ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 16288)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-08-22 16:48:41 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered devise/_auth_layout.html.erb (Duration: 11.4ms | Allocations: 6856)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 12.6ms | Allocations: 7811)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 5.0ms | Allocations: 5927)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.9ms | Allocations: 2005)
+  Rendered layout layouts/devise.html.erb (Duration: 24.1ms | Allocations: 18463)
+Completed 200 OK in 39ms (Views: 25.6ms | ActiveRecord: 2.5ms | Allocations: 26746)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-22 16:54:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+[Devise] Could not find devise mapping for path "/".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+
+AbstractController::ActionNotFound - Could not find devise mapping for path "/".
+This may happen for two reasons:
+1) You forgot to wrap your route inside the scope block. For example:
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+   @request.env["devise.mapping"] = Devise.mappings[:user]:
+
+Started POST "/__better_errors/0c873526946705f8/variables" for 127.0.0.1 at 2024-08-22 16:54:11 -0300
+Started GET "/" for 127.0.0.1 at 2024-08-22 16:55:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+[Devise] Could not find devise mapping for path "/".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+
+AbstractController::ActionNotFound - Could not find devise mapping for path "/".
+This may happen for two reasons:
+1) You forgot to wrap your route inside the scope block. For example:
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+   @request.env["devise.mapping"] = Devise.mappings[:user]:
+
+Started POST "/__better_errors/b694cebb41c1ceb9/variables" for 127.0.0.1 at 2024-08-22 16:55:36 -0300
+Started GET "/" for 127.0.0.1 at 2024-08-22 17:01:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+[Devise] Could not find devise mapping for path "/".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+
+AbstractController::ActionNotFound - Could not find devise mapping for path "/".
+This may happen for two reasons:
+1) You forgot to wrap your route inside the scope block. For example:
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+   @request.env["devise.mapping"] = Devise.mappings[:user]:
+
+Started POST "/__better_errors/bf8089d37be1824b/variables" for 127.0.0.1 at 2024-08-22 17:01:30 -0300
+Started GET "/" for 127.0.0.1 at 2024-08-22 17:03:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 232)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 238)
+  Rendered devise/_auth_layout.html.erb (Duration: 536.9ms | Allocations: 283373)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 542.7ms | Allocations: 285152)
+  Rendered shared/_fonts.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered shared/_meta.html.erb (Duration: 8.1ms | Allocations: 6754)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 3.1ms | Allocations: 2404)
+  Rendered layout layouts/devise.html.erb (Duration: 558.6ms | Allocations: 297920)
+Completed 200 OK in 632ms (Views: 580.1ms | ActiveRecord: 7.4ms | Allocations: 321652)
+
+
