@@ -1843,3 +1843,138 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 632ms (Views: 580.1ms | ActiveRecord: 7.4ms | Allocations: 321652)
 
 
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-08-22 17:04:35 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 0.5ms | Allocations: 5975)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/application_controller.rb:16:in `sign_in'
+
+Started POST "/__better_errors/917329b86d8da437/variables" for 127.0.0.1 at 2024-08-22 17:04:35 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-08-22 17:10:47 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 4.5ms | Allocations: 9508)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/application_controller.rb:16:in `sign_in'
+
+Started POST "/__better_errors/af853ed53306191c/variables" for 127.0.0.1 at 2024-08-22 17:10:47 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-08-22 17:14:36 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/institutions
+Completed 303 See Other in 226ms (ActiveRecord: 3.2ms | Allocations: 8369)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-22 17:14:36 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.6ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.8ms | Allocations: 566)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 9553)
+  Rendered shared/_fonts.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered shared/_meta.html.erb (Duration: 5.3ms | Allocations: 6187)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 398)
+  Rendered shared/_nav_links.html.erb (Duration: 0.4ms | Allocations: 222)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 18.3ms | Allocations: 5727)
+  Rendered shared/_nav.html.erb (Duration: 18.8ms | Allocations: 5965)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.6ms | Allocations: 2333)
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 28318)
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 2.8ms | Allocations: 30316)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-22 17:14:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/institutions
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1624)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-22 17:14:47 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 681)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.4ms | Allocations: 5944)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 74)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.2ms | Allocations: 4841)
+  Rendered shared/_nav.html.erb (Duration: 6.3ms | Allocations: 4909)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.3ms | Allocations: 1974)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 16419)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.7ms | Allocations: 16654)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-08-22 17:14:54 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 303 See Other in 9ms (ActiveRecord: 0.3ms | Allocations: 2591)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-22 17:14:54 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 207)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered devise/_auth_layout.html.erb (Duration: 7.4ms | Allocations: 6252)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 9.3ms | Allocations: 7413)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 4.7ms | Allocations: 5926)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.0ms | Allocations: 2004)
+  Rendered layout layouts/devise.html.erb (Duration: 19.3ms | Allocations: 18175)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 19003)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-08-22 17:15:17 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/institutions
+Completed 303 See Other in 229ms (ActiveRecord: 0.3ms | Allocations: 2475)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-22 17:15:17 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 680)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.5ms | Allocations: 5945)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 127)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 74)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.6ms | Allocations: 4841)
+  Rendered shared/_nav.html.erb (Duration: 6.7ms | Allocations: 4909)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.2ms | Allocations: 1997)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 16428)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.7ms | Allocations: 16662)
+
+

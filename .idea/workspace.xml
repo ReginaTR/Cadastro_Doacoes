@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31038927-ac96-488a-a7e7-1fedc5631b62" name="Changes" comment="feat: create sessions">
+    <list default="true" id="31038927-ac96-488a-a7e7-1fedc5631b62" name="Changes" comment="feat: define routes session">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
     <list id="78f7ee62-1442-4879-9ece-38fb751e45fd" name="Ignore" comment="Ignore" />
@@ -469,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724356063485</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: define routes session">
+      <option name="closed" value="true" />
+      <created>1724357056044</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724357056044</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,11 +506,12 @@
     <MESSAGE value="feat: destroy products" />
     <MESSAGE value="feat: devise on institutions" />
     <MESSAGE value="feat: create sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create sessions" />
+    <MESSAGE value="feat: define routes session" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: define routes session" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Institution.rcov" NAME="Institution Coverage Results" MODIFIED="1724177907303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
-    <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Cadastro_Doacoes.rcov" NAME="Cadastro_Doacoes Coverage Results" MODIFIED="1724356533030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
+    <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Cadastro_Doacoes.rcov" NAME="Cadastro_Doacoes Coverage Results" MODIFIED="1724357001703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@routes.rcov" NAME="routes Coverage Results" MODIFIED="1724250805716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
   </component>
 </project>
