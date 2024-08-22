@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '474c083c50ac2c492f56b4b161a3fa50ece695a59b2e72a4a862a3d5f53dcdc9e64f1128b1aaaec601eaf86dae0f652690d02d70f3dd9a0344f79ce9294fad9b'
+  # config.secret_key = '05cb3ee7e61f5e24b79d89206ae5167c1b6081086948ba715d5ea40f8f29f925e640a7e8e8e19b1bb20a39bb3f8352796010131e51b824c8608b653ac7b2a0a9'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = Railsui.config.support_email
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '67b78102aed6715d09e46dc282ace59aae9273aa6243c3043952a96a953e0c8d6e9b8acf11f95ce2c881fbc9d45788aeca649e7f918c2818f938baccaa42d2f0'
+  # config.pepper = 'e3fb0caf0252284034e64461c0ac2e9bafd47167b34d5395093339b2f543708bf2977deb7319848d42551cb58c364e341265be2cbb2884174cfc6fca301b1177'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -310,13 +310,14 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-end
 
-Rails.application.config.to_prepare do
-  Devise::SessionsController.layout "devise"
-  Devise::RegistrationsController.layout proc { |controller| user_signed_in? ? "application" : "devise" }
-  Devise::ConfirmationsController.layout "devise"
-  Devise::PasswordsController.layout "devise"
-  Devise::UnlocksController.layout "devise"
-  Devise::Mailer.helper Railsui::MailHelper
+  # ==> Configuration for :authentication_keys
+  # Configure which key(s) should be used when authenticating a user. By default,
+  # :email is used.
+  config.authentication_keys = [:email]
+
+  # ==> Configuration for :sign_in_after_change_password
+  # The default is true. You can set it to false if you want to force the user to sign in again after
+  # changing their password. The user will be signed out automatically after changing their password.
+  config.sign_in_after_change_password = true
 end
