@@ -876,3 +876,233 @@ Processing by InstitutionsController#new as HTML
 Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms | Allocations: 32363)
 
 
+Started GET "/institutions" for 127.0.0.1 at 2024-08-22 14:33:13 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (20.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.7ms | Allocations: 382)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 7222)
+  Rendered shared/_fonts.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered shared/_meta.html.erb (Duration: 5.0ms | Allocations: 6188)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 191)
+  Rendered shared/_nav_links.html.erb (Duration: 0.6ms | Allocations: 208)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.9ms | Allocations: 4824)
+  Rendered shared/_nav.html.erb (Duration: 6.3ms | Allocations: 5055)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.6ms | Allocations: 2321)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 24846)
+Completed 200 OK in 49ms (Views: 22.3ms | ActiveRecord: 23.7ms | Allocations: 27070)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-08-22 14:33:15 -0300
+Processing by PageController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/about.html.erb within layouts/application
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_nav_menu.html.erb (Duration: 7.3ms | Allocations: 4314)
+  Rendered shared/_footer.html.erb (Duration: 6.9ms | Allocations: 5401)
+  Rendered page/about.html.erb within layouts/application (Duration: 29.9ms | Allocations: 21765)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 4.4ms | Allocations: 5823)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.1ms | Allocations: 1975)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 31971)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 32485)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-22 14:33:17 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 85)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 12.6ms | Allocations: 5920)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.4ms | Allocations: 4162)
+  Rendered shared/_nav.html.erb (Duration: 5.5ms | Allocations: 4230)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.1ms | Allocations: 1992)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 15032)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 15499)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-08-22 14:33:29 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 208)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered devise/_auth_layout.html.erb (Duration: 12.7ms | Allocations: 7170)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 14.6ms | Allocations: 8382)
+  Rendered shared/_fonts.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 5.5ms | Allocations: 5926)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.2ms | Allocations: 1991)
+  Rendered layout layouts/devise.html.erb (Duration: 25.5ms | Allocations: 19020)
+Completed 200 OK in 47ms (Views: 27.0ms | ActiveRecord: 3.3ms | Allocations: 30877)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-08-22 14:33:33 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered devise/_auth_layout.html.erb (Duration: 10.0ms | Allocations: 7224)
+  Rendered devise/registrations/new.html.erb within layouts/devise (Duration: 12.6ms | Allocations: 8033)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.3ms | Allocations: 5873)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.2ms | Allocations: 1974)
+  Rendered layout layouts/devise.html.erb (Duration: 22.7ms | Allocations: 18268)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 19140)
+
+
+Started GET "/institutions/1" for 127.0.0.1 at 2024-08-22 14:33:39 -0300
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/institutions_controller.rb:63:in `set_institution'
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/show.html.erb within layouts/application
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered institutions/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 435)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.3ms | Allocations: 5944)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 4.0ms | Allocations: 4148)
+  Rendered shared/_nav.html.erb (Duration: 4.1ms | Allocations: 4216)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.1ms | Allocations: 1992)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 15404)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.4ms | Allocations: 18108)
+
+
+Started GET "/institutions/1" for 127.0.0.1 at 2024-08-22 14:33:39 -0300
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstitution Load (0.5ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/institutions_controller.rb:63:in `set_institution'
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/show.html.erb within layouts/application
+  Rendered institutions/_institution.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered institutions/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 243)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 7.8ms | Allocations: 5925)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.0ms | Allocations: 4130)
+  Rendered shared/_nav.html.erb (Duration: 5.2ms | Allocations: 4198)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.2ms | Allocations: 1975)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 15126)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.5ms | Allocations: 15774)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-22 14:33:42 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 8.2ms | Allocations: 5925)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.7ms | Allocations: 4150)
+  Rendered shared/_nav.html.erb (Duration: 5.8ms | Allocations: 4218)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.0ms | Allocations: 1974)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 14929)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 15153)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-22 14:33:49 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 9.1ms | Allocations: 5958)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.6ms | Allocations: 4153)
+  Rendered shared/_nav.html.erb (Duration: 5.7ms | Allocations: 4221)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.8ms | Allocations: 1992)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 14977)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 15202)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-22 14:33:51 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_fonts.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 9.7ms | Allocations: 5935)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.4ms | Allocations: 4137)
+  Rendered shared/_nav.html.erb (Duration: 5.7ms | Allocations: 4205)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.7ms | Allocations: 1975)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 14929)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 15153)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-22 14:33:51 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.5ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 1.1ms | Allocations: 103)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 671)
+  Rendered shared/_fonts.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 10.5ms | Allocations: 5917)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.8ms | Allocations: 4131)
+  Rendered shared/_nav.html.erb (Duration: 5.9ms | Allocations: 4199)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.6ms | Allocations: 1975)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 15563)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 1.5ms | Allocations: 15797)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-22 14:33:52 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_fonts.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 9.7ms | Allocations: 5906)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 5.7ms | Allocations: 4135)
+  Rendered shared/_nav.html.erb (Duration: 5.8ms | Allocations: 4203)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.6ms | Allocations: 1974)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 14884)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 15108)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-22 14:33:52 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_fonts.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_meta.html.erb (Duration: 11.3ms | Allocations: 5955)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 6.4ms | Allocations: 4153)
+  Rendered shared/_nav.html.erb (Duration: 6.5ms | Allocations: 4221)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 4.0ms | Allocations: 1992)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 14974)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 15199)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddDeviseToInstitutions (20240822174338)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "institutions" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3031220195110858275)[0m

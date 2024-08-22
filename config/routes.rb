@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :institutions
   resources :institutions
 	get 'about', to: 'page#about'
   if Rails.env.development? || Rails.env.test?

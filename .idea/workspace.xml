@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31038927-ac96-488a-a7e7-1fedc5631b62" name="Changes" comment="feat: node">
+    <list default="true" id="31038927-ac96-488a-a7e7-1fedc5631b62" name="Changes" comment="feat: resolve conflicts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/products_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/institution.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/institution.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_nav_menu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_nav_menu.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
     <list id="78f7ee62-1442-4879-9ece-38fb751e45fd" name="Ignore" comment="Ignore" />
@@ -436,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724346285904</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: resolve conflicts">
+      <option name="closed" value="true" />
+      <created>1724347884556</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724347884556</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +475,8 @@
     <MESSAGE value="test: test rspec Institutions" />
     <MESSAGE value="feat: node" />
     <MESSAGE value="Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore" />
+    <MESSAGE value="feat: resolve conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: resolve conflicts" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Institution.rcov" NAME="Institution Coverage Results" MODIFIED="1724177907303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
