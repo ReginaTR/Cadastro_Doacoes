@@ -22,8 +22,8 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :institution_id, class: "form-label" %>
-    <%= form.text_field :institution_id, class: "form-input" %>
+    <%= form.label :institution_id, "Institution", class: "form-label" %>
+    <%= form.collection_select :institution_id, Institution.all, :id, :name, { prompt: "Select an Institution" }, { class: "form-input" } %>
   </div>
 
   <div class="flex items-center justify-between flex-wrap">
