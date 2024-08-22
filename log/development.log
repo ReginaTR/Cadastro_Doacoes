@@ -1,0 +1,414 @@
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE DATABASE "lead_score_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "lead_score_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4675287208255921635)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4675287208255921635)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "cadastro_doacoes_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "cadastro_doacoes_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "cadastro_doacoes_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "cadastro_doacoes_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to DeviseCreateUsers (20240729185626)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240729185626') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240729185655)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240729185655') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActionTextTables (20240729185658)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts" ("record_type", "record_id", "name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240729185658') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "first_name", "last_name", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "admin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["first_name", "Admin"], ["last_name", "Doe"], ["admin", true], ["created_at", "2024-07-29 18:57:02.867545"], ["updated_at", "2024-07-29 18:57:02.867545"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john.doe@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "first_name", "last_name", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "john.doe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["first_name", "John"], ["last_name", "Doe"], ["admin", false], ["created_at", "2024-07-29 18:57:03.064384"], ["updated_at", "2024-07-29 18:57:03.064384"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2024-07-29 16:00:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Railsui::PageController#index as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/landing.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/page/index.html.erb within layouts/railsui/landing
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/page/_launchpad.html.erb (Duration: 2990.3ms | Allocations: 1119043)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/page/index.html.erb within layouts/railsui/landing (Duration: 2991.2ms | Allocations: 1119451)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_scroll_to_top.html.erb (Duration: 2.2ms | Allocations: 2127)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/landing.html.erb (Duration: 3001.1ms | Allocations: 1126295)
+Completed 200 OK in 3025ms (Views: 3007.9ms | ActiveRecord: 0.0ms | Allocations: 1134820)
+
+
+Started GET "/railsui/" for 127.0.0.1 at 2024-07-29 16:00:57 -0300
+Processing by Railsui::AdminController#show as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_callout.html.erb (Duration: 2.8ms | Allocations: 1728)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_general.html.erb (Duration: 4.0ms | Allocations: 1624)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme_setup.html.erb (Duration: 8.0ms | Allocations: 6530)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme.html.erb (Duration: 9.0ms | Allocations: 7010)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_commit.html.erb (Duration: 0.7ms | Allocations: 297)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_loader.html.erb (Duration: 3.9ms | Allocations: 3242)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_form.html.erb (Duration: 33.0ms | Allocations: 18078)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth (Duration: 34.0ms | Allocations: 18336)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.6ms | Allocations: 2306)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.1ms | Allocations: 2031)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.1ms | Allocations: 2026)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav.html.erb (Duration: 16.2ms | Allocations: 12447)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb (Duration: 57.2ms | Allocations: 35996)
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 38293)
+
+
+Started POST "/railsui/configuration" for 127.0.0.1 at 2024-07-29 16:01:38 -0300
+Processing by Railsui::ConfigurationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "configuration"=>{"application_name"=>"Cadastro_Doacoes", "support_email"=>"support@example.com", "theme"=>"hound"}, "button_clicked"=>"config_button_first_install"}
+Redirected to http://127.0.0.1:3000/railsui/
+Completed 302 Found in 20908ms (ActiveRecord: 0.0ms | Allocations: 3933)
+
+
+Started GET "/railsui/" for 127.0.0.1 at 2024-07-29 16:01:59 -0300
+Processing by Railsui::AdminController#show as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_callout.html.erb (Duration: 2.6ms | Allocations: 1761)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_general.html.erb (Duration: 0.9ms | Allocations: 570)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_color.html.erb (Duration: 2.7ms | Allocations: 1862)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme_active.html.erb (Duration: 11.2ms | Allocations: 5816)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme.html.erb (Duration: 12.2ms | Allocations: 6283)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.8ms | Allocations: 283)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.4ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_pages.html.erb (Duration: 14.9ms | Allocations: 7703)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_commit.html.erb (Duration: 0.6ms | Allocations: 242)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_loader.html.erb (Duration: 6.0ms | Allocations: 3305)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_form.html.erb (Duration: 41.2ms | Allocations: 21619)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth (Duration: 41.8ms | Allocations: 21875)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.5ms | Allocations: 2190)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 4.1ms | Allocations: 2025)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 3.0ms | Allocations: 1926)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 3.3ms | Allocations: 1926)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav.html.erb (Duration: 22.5ms | Allocations: 14178)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 2.1ms | Allocations: 408)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb (Duration: 85.9ms | Allocations: 43347)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.0ms | Allocations: 44573)
+
+
+Started POST "/railsui/configuration" for 127.0.0.1 at 2024-07-29 16:02:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Railsui::ConfigurationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "configuration"=>{"application_name"=>"Cadastro_Doacoes", "support_email"=>"support@example.com", "theme"=>"hound", "colors"=>{"primary"=>{"50"=>"#eef2ff", "100"=>"#e0e7ff", "200"=>"#c7d2fe", "300"=>"#a5b4fc", "400"=>"#818cf8", "500"=>"#6366f1", "600"=>"#4f46e5", "700"=>"#4338ca", "800"=>"#3730a3", "900"=>"#312e81", "950"=>"#1e1b4b"}, "secondary"=>{"50"=>"#f8fafc", "100"=>"#f1f5f9", "200"=>"#e2e8f0", "300"=>"#cbd5e1", "400"=>"#94a3b8", "500"=>"#64748b", "600"=>"#475569", "700"=>"#334155", "800"=>"#1e293b", "900"=>"#0f172a", "950"=>"#020617"}}, "pages"=>["about"]}}
+Redirected to http://127.0.0.1:3000/railsui/
+Completed 302 Found in 9810ms (ActiveRecord: 0.0ms | Allocations: 8347)
+
+
+Started GET "/railsui/" for 127.0.0.1 at 2024-07-29 16:02:49 -0300
+Processing by Railsui::AdminController#show as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_callout.html.erb (Duration: 5.1ms | Allocations: 2540)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_general.html.erb (Duration: 3.4ms | Allocations: 1212)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_color.html.erb (Duration: 3.2ms | Allocations: 1794)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme_active.html.erb (Duration: 1664.9ms | Allocations: 539861)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme.html.erb (Duration: 1666.8ms | Allocations: 540347)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_active_page.html.erb (Duration: 9.9ms | Allocations: 6474)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.7ms | Allocations: 279)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_pages.html.erb (Duration: 30.0ms | Allocations: 14112)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_commit.html.erb (Duration: 1.1ms | Allocations: 265)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_loader.html.erb (Duration: 6.2ms | Allocations: 3523)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_form.html.erb (Duration: 1718.1ms | Allocations: 563994)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth (Duration: 1718.8ms | Allocations: 564377)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.6ms | Allocations: 2246)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 1.9ms | Allocations: 1966)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.3ms | Allocations: 1967)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.6ms | Allocations: 1967)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav.html.erb (Duration: 19.5ms | Allocations: 14543)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 0.8ms | Allocations: 415)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb (Duration: 1759.5ms | Allocations: 585658)
+Completed 200 OK in 1773ms (Views: 1762.8ms | ActiveRecord: 0.0ms | Allocations: 589859)
+
+
+Started POST "/railsui/configuration" for 127.0.0.1 at 2024-07-29 16:03:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Railsui::ConfigurationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "configuration"=>{"application_name"=>"Cadastro_Doacoes", "support_email"=>"support@example.com", "theme"=>"hound", "colors"=>{"primary"=>{"50"=>"#eef2ff", "100"=>"#e0e7ff", "200"=>"#c7d2fe", "300"=>"#a5b4fc", "400"=>"#818cf8", "500"=>"#6366f1", "600"=>"#4f46e5", "700"=>"#4338ca", "800"=>"#3730a3", "900"=>"#312e81", "950"=>"#1e1b4b"}, "secondary"=>{"50"=>"#f8fafc", "100"=>"#f1f5f9", "200"=>"#e2e8f0", "300"=>"#cbd5e1", "400"=>"#94a3b8", "500"=>"#64748b", "600"=>"#475569", "700"=>"#334155", "800"=>"#1e293b", "900"=>"#0f172a", "950"=>"#020617"}}}}
+Redirected to http://127.0.0.1:3000/railsui/
+Completed 302 Found in 7975ms (ActiveRecord: 0.0ms | Allocations: 7843)
+
+
+Started GET "/railsui/" for 127.0.0.1 at 2024-07-29 16:03:14 -0300
+Processing by Railsui::AdminController#show as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_callout.html.erb (Duration: 3.9ms | Allocations: 2540)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_general.html.erb (Duration: 2.1ms | Allocations: 1214)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_color.html.erb (Duration: 2.4ms | Allocations: 1794)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme_active.html.erb (Duration: 525.5ms | Allocations: 281241)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme.html.erb (Duration: 526.3ms | Allocations: 281727)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_active_page.html.erb (Duration: 9.6ms | Allocations: 6534)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 1.3ms | Allocations: 280)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_pages.html.erb (Duration: 22.9ms | Allocations: 14308)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_commit.html.erb (Duration: 0.6ms | Allocations: 265)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_loader.html.erb (Duration: 5.5ms | Allocations: 3417)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_form.html.erb (Duration: 565.4ms | Allocations: 305449)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth (Duration: 566.6ms | Allocations: 305832)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 3.2ms | Allocations: 2305)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.6ms | Allocations: 2026)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 3.1ms | Allocations: 2027)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.3ms | Allocations: 2026)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav.html.erb (Duration: 19.9ms | Allocations: 14734)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 0.8ms | Allocations: 416)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb (Duration: 607.6ms | Allocations: 327288)
+Completed 200 OK in 616ms (Views: 611.4ms | ActiveRecord: 0.0ms | Allocations: 331451)
+
+
+Started POST "/railsui/configuration" for 127.0.0.1 at 2024-07-29 16:03:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Railsui::ConfigurationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "configuration"=>{"application_name"=>"Cadastro_Doacoes", "support_email"=>"support@example.com", "theme"=>"hound", "colors"=>{"primary"=>{"50"=>"#eef2ff", "100"=>"#e0e7ff", "200"=>"#c7d2fe", "300"=>"#a5b4fc", "400"=>"#818cf8", "500"=>"#6366f1", "600"=>"#4f46e5", "700"=>"#4338ca", "800"=>"#3730a3", "900"=>"#312e81", "950"=>"#1e1b4b"}, "secondary"=>{"50"=>"#f8fafc", "100"=>"#f1f5f9", "200"=>"#e2e8f0", "300"=>"#cbd5e1", "400"=>"#94a3b8", "500"=>"#64748b", "600"=>"#475569", "700"=>"#334155", "800"=>"#1e293b", "900"=>"#0f172a", "950"=>"#020617"}}}}
+Redirected to http://127.0.0.1:3000/railsui/
+Completed 302 Found in 7986ms (ActiveRecord: 0.0ms | Allocations: 7849)
+
+
+Started GET "/railsui/" for 127.0.0.1 at 2024-07-29 16:03:37 -0300
+Processing by Railsui::AdminController#show as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_callout.html.erb (Duration: 3.5ms | Allocations: 2540)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_general.html.erb (Duration: 2.3ms | Allocations: 1214)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_color.html.erb (Duration: 2.7ms | Allocations: 1794)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme_active.html.erb (Duration: 565.7ms | Allocations: 281290)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_theme.html.erb (Duration: 566.6ms | Allocations: 281776)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_active_page.html.erb (Duration: 9.6ms | Allocations: 6535)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.6ms | Allocations: 280)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.4ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_inactive_page.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_pages.html.erb (Duration: 23.8ms | Allocations: 14309)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/fields/_commit.html.erb (Duration: 0.8ms | Allocations: 265)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_loader.html.erb (Duration: 5.7ms | Allocations: 3417)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/_form.html.erb (Duration: 607.1ms | Allocations: 305511)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/admin/show.html.erb within layouts/railsui/fullwidth (Duration: 608.3ms | Allocations: 305894)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 3.4ms | Allocations: 2305)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.2ms | Allocations: 2026)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.6ms | Allocations: 2027)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav_item.html.erb (Duration: 2.6ms | Allocations: 2026)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_global_nav.html.erb (Duration: 21.0ms | Allocations: 14734)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 1.0ms | Allocations: 416)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/fullwidth.html.erb (Duration: 650.0ms | Allocations: 327402)
+Completed 200 OK in 660ms (Views: 654.3ms | ActiveRecord: 0.0ms | Allocations: 331565)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateInstitutions (20240820171533)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE TABLE "institutions" ("id" bigserial primary key, "name" character varying, "email" character varying, "cnpj" character varying, "address" character varying, "phone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240820171533') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-08-20 14:23:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Railsui::PageController#index as HTML
+  Rendering layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/landing.html.erb
+  Rendering /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/page/index.html.erb within layouts/railsui/landing
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/page/_launchpad.html.erb (Duration: 704.5ms | Allocations: 365880)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/page/index.html.erb within layouts/railsui/landing (Duration: 705.6ms | Allocations: 366288)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_flash.html.erb (Duration: 0.5ms | Allocations: 215)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_scroll_to_top.html.erb (Duration: 2.9ms | Allocations: 2072)
+  Rendered layout /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/layouts/railsui/landing.html.erb (Duration: 731.8ms | Allocations: 372916)
+Completed 200 OK in 742ms (Views: 734.4ms | ActiveRecord: 0.0ms | Allocations: 377594)
+
+
+Started GET "/institution" for 127.0.0.1 at 2024-08-20 14:24:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/institution"):
+  
+Started GET "/institutions" for 127.0.0.1 at 2024-08-20 14:25:35 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.5ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 3670)
+  Rendered shared/_fonts.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered shared/_meta.html.erb (Duration: 6.7ms | Allocations: 6654)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 194)
+  Rendered shared/_nav_links.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered shared/_nav_menu.html.erb (Duration: 6.6ms | Allocations: 4989)
+  Rendered shared/_nav.html.erb (Duration: 7.1ms | Allocations: 5227)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 3.0ms | Allocations: 2429)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 21910)
+Completed 200 OK in 55ms (Views: 42.8ms | ActiveRecord: 4.4ms | Allocations: 24325)
+
+
+Started GET "/institutions/new" for 127.0.0.1 at 2024-08-20 14:25:37 -0300
+Processing by InstitutionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 223)
+  Rendered institutions/_form.html.erb (Duration: 3.5ms | Allocations: 2811)
+  Rendered institutions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3115)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.4ms | Allocations: 5884)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 4.6ms | Allocations: 4131)
+  Rendered shared/_nav.html.erb (Duration: 4.7ms | Allocations: 4199)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.3ms | Allocations: 1995)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 17769)
+Completed 200 OK in 52ms (Views: 25.8ms | ActiveRecord: 8.6ms | Allocations: 29224)
+
+
+Started POST "/institutions" for 127.0.0.1 at 2024-08-20 14:26:15 -0300
+Processing by InstitutionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "institution"=>{"name"=>"Casa de Caridade", "email"=>"casadecaridade@gmail.com", "cnpj"=>"222222222/11", "address"=>"Taguatinga", "phone"=>"618888888"}, "commit"=>"Create Institution"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/institutions_controller.rb:27:in `block in create'
+  [1m[36mInstitution Create (1.6ms)[0m  [1m[32mINSERT INTO "institutions" ("name", "email", "cnpj", "address", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Casa de Caridade"], ["email", "casadecaridade@gmail.com"], ["cnpj", "222222222/11"], ["address", "Taguatinga"], ["phone", "618888888"], ["created_at", "2024-08-20 17:26:15.871753"], ["updated_at", "2024-08-20 17:26:15.871753"]]
+  ↳ app/controllers/institutions_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/institutions_controller.rb:27:in `block in create'
+Redirected to http://0.0.0.0:3000/institutions/1
+Completed 302 Found in 9ms (ActiveRecord: 4.1ms | Allocations: 3485)
+
+
+Started GET "/institutions/1" for 127.0.0.1 at 2024-08-20 14:26:15 -0300
+Processing by InstitutionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/institutions_controller.rb:63:in `set_institution'
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/show.html.erb within layouts/application
+  Rendered institutions/_institution.html.erb (Duration: 1.0ms | Allocations: 437)
+  Rendered institutions/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1152)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.0ms | Allocations: 5930)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 4.3ms | Allocations: 4108)
+  Rendered shared/_nav.html.erb (Duration: 4.4ms | Allocations: 4176)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.4ms | Allocations: 1973)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 16096)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.4ms | Allocations: 18772)
+
+
+Started GET "/institutions/1" for 127.0.0.1 at 2024-08-20 14:26:18 -0300
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstitution Load (0.6ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/institutions_controller.rb:63:in `set_institution'
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/show.html.erb within layouts/application
+  Rendered institutions/_institution.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered institutions/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 239)
+  Rendered shared/_fonts.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 7.9ms | Allocations: 5884)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered shared/_nav_menu.html.erb (Duration: 4.9ms | Allocations: 4107)
+  Rendered shared/_nav.html.erb (Duration: 5.0ms | Allocations: 4175)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.8ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 15010)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.6ms | Allocations: 15671)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddIndexToInstitutionsEmail (20240820180952)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_institutions_on_email" ON "institutions" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240820180952') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3031220195110858275)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

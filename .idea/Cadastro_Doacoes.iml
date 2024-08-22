@@ -3,6 +3,8 @@
   <component name="ModuleRunConfigurationManager">
     <shared />
   </component>
+<<<<<<< HEAD
+=======
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
     <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
@@ -95,6 +97,7 @@
       </list>
     </option>
   </component>
+>>>>>>> b1d7e1751e435ed2aae85312d883ee6b5ba2617a
   <component name="RailsPaths" isManagedAutomatically="true">
     <entry key="app">
       <value>file://$MODULE_DIR$/app</value>
@@ -183,10 +186,13 @@
     <entry key="public/stylesheets">
       <value>file://$MODULE_DIR$/public/stylesheets</value>
     </entry>
+<<<<<<< HEAD
+=======
     <entry key="test/mailers/previews">
       <value>file://$MODULE_DIR$/test/mailers/previews</value>
       <value>file://$MODULE_DIR$/test/mailers/previews</value>
     </entry>
+>>>>>>> b1d7e1751e435ed2aae85312d883ee6b5ba2617a
     <entry key="tmp">
       <value>file://$MODULE_DIR$/tmp</value>
     </entry>
