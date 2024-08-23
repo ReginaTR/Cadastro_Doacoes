@@ -1,8 +1,14 @@
 <div class="max-w-3xl mx-auto px-4 my-16">
   <div class="flex items-center justify-between pb-6 border-b dark:border-slate-700">
     <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">Products</h1>
+
     <div class="flex items-center justify-end">
-      <%= link_to "New Product", new_product_path, class: "btn btn-primary" %>
+      <%= form_with url: products_path, method: :get, local: true, class: "inline-block" do |f| %>
+        <%= f.select :institution_id, options_from_collection_for_select(Institution.all, :id, :name, params[:institution_id]), { include_blank: "All Institutions" }, class: "form-select" %>
+        <%= f.submit 'Filter', class: "btn btn-primary ml-2" %>
+      <% end %>
+
+      <%= link_to "New Product", new_product_path, class: "btn btn-primary ml-4" %>
     </div>
   </div>
 
@@ -10,7 +16,6 @@
     <% @products.each do |product| %>
       <div class="py-3">
         <%= render product %>
-
         <%= link_to "View product", product, class: "btn-link inline-block my-3" %>
       </div>
     <% end %>

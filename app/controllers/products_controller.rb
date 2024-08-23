@@ -3,7 +3,12 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    if params[:institution_id].present?
+      @institution = Institution.find(params[:institution_id])
+      @products = @institution.products
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1 or /products/1.json
@@ -68,3 +73,4 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :description, :quantity, :status, :institution_id)
     end
 end
+
