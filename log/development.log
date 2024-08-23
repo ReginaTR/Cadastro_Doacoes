@@ -4381,3 +4381,562 @@ Processing by ProductsController#new as HTML
 Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.1ms | Allocations: 17514)
 
 
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:19 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (92.7ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 3.3ms | Allocations: 689)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 0.9ms | Allocations: 529)
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 4.2ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 116.4ms | Allocations: 7323)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 15.9ms | Allocations: 5970)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 13.7ms | Allocations: 4891)
+  Rendered shared/_nav.html.erb (Duration: 13.8ms | Allocations: 4959)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 6.3ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 161.9ms | Allocations: 23076)
+Completed 200 OK in 162ms (Views: 43.2ms | ActiveRecord: 119.1ms | Allocations: 23315)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-08-23 10:40:25 -0300
+Processing by PageController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/about.html.erb within layouts/application
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 107)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.1ms | Allocations: 5067)
+  Rendered shared/_footer.html.erb (Duration: 15.5ms | Allocations: 5777)
+  Rendered page/about.html.erb within layouts/application (Duration: 57.4ms | Allocations: 23869)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.4ms | Allocations: 5880)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.1ms | Allocations: 1973)
+  Rendered layout layouts/application.html.erb (Duration: 67.7ms | Allocations: 34128)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.3ms | Allocations: 34644)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-23 10:40:30 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/institutions
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1741)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:40:30 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.5ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered institutions/_institution.html.erb (Duration: 0.2ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 889)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 4.6ms | Allocations: 5899)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 135)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 7.4ms | Allocations: 4868)
+  Rendered shared/_nav.html.erb (Duration: 7.5ms | Allocations: 4936)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.3ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 16645)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.7ms | Allocations: 16880)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:31 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 663)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.2ms | Allocations: 529)
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.4ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.1ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4502)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 7.9ms | Allocations: 5974)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 8.0ms | Allocations: 4877)
+  Rendered shared/_nav.html.erb (Duration: 8.7ms | Allocations: 4945)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.8ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 20242)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 1.7ms | Allocations: 20482)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:40:31 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.6ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 889)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 8.8ms | Allocations: 5968)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.3ms | Allocations: 106)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 8.7ms | Allocations: 4854)
+  Rendered shared/_nav.html.erb (Duration: 9.0ms | Allocations: 4922)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 3.1ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 16574)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.9ms | Allocations: 16809)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:32 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.4ms | Allocations: 663)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.4ms | Allocations: 529)
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.0ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.0ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 4502)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.8ms | Allocations: 5889)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 5.4ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 5.4ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 3.0ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 20100)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 2.5ms | Allocations: 20339)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:34 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.1ms | Allocations: 663)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.2ms | Allocations: 529)
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.0ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 4501)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 6.1ms | Allocations: 5899)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 5.1ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 5.2ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.0ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 20103)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 2.4ms | Allocations: 20341)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:40:35 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 889)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 7.4ms | Allocations: 5884)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.3ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 6.4ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.3ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 16487)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 1.3ms | Allocations: 16721)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:35 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.6ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.2ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.9ms | Allocations: 663)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 529)
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 3.0ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.2ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4502)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 6.8ms | Allocations: 5971)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.4ms | Allocations: 4872)
+  Rendered shared/_nav.html.erb (Duration: 6.6ms | Allocations: 4940)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.2ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 20228)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 1.6ms | Allocations: 20468)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:40:35 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.9ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 889)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 8.7ms | Allocations: 5968)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.5ms | Allocations: 4854)
+  Rendered shared/_nav.html.erb (Duration: 6.6ms | Allocations: 4922)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.7ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 16569)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 1.2ms | Allocations: 16804)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:36 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.1ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.5ms | Allocations: 663)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.7ms | Allocations: 529)
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.5ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.4ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4502)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 8.9ms | Allocations: 5889)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 8.1ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 8.2ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 3.2ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 20082)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 2.7ms | Allocations: 20321)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:40:37 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.9ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 889)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 6.5ms | Allocations: 5899)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 5.9ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 6.0ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.3ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 16486)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.1ms | Allocations: 16720)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:40:39 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.1ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.7ms | Allocations: 103)
+  Rendered institutions/_institution.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 889)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 8.6ms | Allocations: 5884)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 6.5ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 6.6ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.3ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 16463)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 1.3ms | Allocations: 16697)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:40:40 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.5ms | Allocations: 663)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.9ms | Allocations: 529)
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 3.0ms | Allocations: 657)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.2ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4502)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 6.4ms | Allocations: 5971)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 7.4ms | Allocations: 4872)
+  Rendered shared/_nav.html.erb (Duration: 7.5ms | Allocations: 4940)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.1ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 20243)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 2.3ms | Allocations: 20483)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-08-23 10:41:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-23 10:41:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/institutions
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 9.1ms | Allocations: 6461)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 10:41:46 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 0.8ms | Allocations: 382)
+  Rendered institutions/_institution.html.erb (Duration: 0.2ms | Allocations: 96)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 6113)
+  Rendered shared/_fonts.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered shared/_meta.html.erb (Duration: 5.4ms | Allocations: 6213)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 304)
+  Rendered shared/_nav_links.html.erb (Duration: 0.7ms | Allocations: 1550)
+  Rendered shared/_nav_menu.html.erb (Duration: 4.9ms | Allocations: 5970)
+  Rendered shared/_nav.html.erb (Duration: 5.6ms | Allocations: 6199)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 22404)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.3ms | Allocations: 24211)
+
+
+
+NoMethodError - undefined method `about_path' for an instance of #<Class:0x00007f25b6e47090>:
+  app/views/shared/_nav_links.html.erb:3
+  app/views/shared/_nav_menu.html.erb:46
+  app/views/shared/_nav.html.erb:2
+  app/views/layouts/application.html.erb:23
+
+Started POST "/__better_errors/c90f921e512b9198/variables" for 127.0.0.1 at 2024-08-23 10:41:46 -0300
+Started GET "/products?institution_id=2&commit=Filter" for 127.0.0.1 at 2024-08-23 10:56:54 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"institution_id"=>"2", "commit"=>"Filter"}
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."institution_id" = $1[0m  [["institution_id", 2]]
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/_product.html.erb (Duration: 0.9ms | Allocations: 385)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 7552)
+  Rendered shared/_fonts.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered shared/_meta.html.erb (Duration: 21.0ms | Allocations: 6177)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 304)
+  Rendered shared/_nav_links.html.erb (Duration: 0.7ms | Allocations: 262)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 23.4ms | Allocations: 9782)
+  Rendered shared/_nav.html.erb (Duration: 24.6ms | Allocations: 10013)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 8.2ms | Allocations: 2339)
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 30293)
+Completed 200 OK in 138ms (Views: 84.4ms | ActiveRecord: 12.5ms | Allocations: 42084)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 10:56:56 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (1.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 3.0ms | Allocations: 1524)
+  [1m[36mCACHE Institution Load (0.1ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.1ms | Allocations: 534)
+  [1m[36mInstitution Load (0.4ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 662)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.1ms | Allocations: 531)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 5413)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 5.2ms | Allocations: 5884)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 5.7ms | Allocations: 4848)
+  Rendered shared/_nav.html.erb (Duration: 5.8ms | Allocations: 4916)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.2ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 20995)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 2.5ms | Allocations: 21236)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-23 11:04:15 -0300
+
+NoMethodError - undefined method `rget' for an instance of ActionDispatch::Routing::Mapper:
+  config/routes.rb:10:in `block in <main>'
+  config/routes.rb:1:in `<main>'
+
+Started POST "/__better_errors/5636ef8dddef8c0d/variables" for 127.0.0.1 at 2024-08-23 11:04:15 -0300
+Started GET "/products" for 127.0.0.1 at 2024-08-23 11:04:46 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mInstitution Load (20.8ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/products/index.html.erb:7
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mInstitution Load (0.3ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 5.3ms | Allocations: 2409)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 534)
+  [1m[36mInstitution Load (0.2ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 2.1ms | Allocations: 662)
+  [1m[36mCACHE Institution Load (0.0ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions" WHERE "institutions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:30
+  Rendered products/_product.html.erb (Duration: 0.8ms | Allocations: 536)
+  Rendered products/index.html.erb within layouts/application (Duration: 44.5ms | Allocations: 17716)
+  Rendered shared/_fonts.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered shared/_meta.html.erb (Duration: 16.3ms | Allocations: 6214)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 191)
+  Rendered shared/_nav_links.html.erb (Duration: 0.5ms | Allocations: 207)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 14.8ms | Allocations: 9730)
+  Rendered shared/_nav.html.erb (Duration: 15.3ms | Allocations: 9961)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.9ms | Allocations: 2337)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 40308)
+Completed 200 OK in 91ms (Views: 60.5ms | ActiveRecord: 26.0ms | Allocations: 42726)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2024-08-23 11:04:49 -0300
+Processing by InstitutionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering institutions/index.html.erb within layouts/application
+  [1m[36mInstitution Load (0.8ms)[0m  [1m[34mSELECT "institutions".* FROM "institutions"[0m
+  ↳ app/views/institutions/index.html.erb:10
+  Rendered institutions/_institution.html.erb (Duration: 1.2ms | Allocations: 365)
+  Rendered institutions/_institution.html.erb (Duration: 0.3ms | Allocations: 101)
+  Rendered institutions/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1479)
+  Rendered shared/_fonts.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_meta.html.erb (Duration: 6.5ms | Allocations: 5884)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_nav_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav_menu.html.erb:52
+  Rendered shared/_nav_menu.html.erb (Duration: 5.6ms | Allocations: 4819)
+  Rendered shared/_nav.html.erb (Duration: 5.7ms | Allocations: 4887)
+  Rendered /home/regina/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/bundler/gems/railsui-8d80d6ebd2f2/app/views/railsui/shared/_launcher.html.erb (Duration: 2.1ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 17035)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.1ms | Allocations: 17603)
+
+
