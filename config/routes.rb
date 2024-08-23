@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  resources :products
+
   devise_scope :user do
     root to: 'devise/sessions#new'
   end
 
   resources :institutions
+  resources :products
 
   get 'about', to: 'page#about'
 
