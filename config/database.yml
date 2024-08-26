@@ -85,5 +85,9 @@ test:
 production:
   <<: *default
   database: cadastro_doacoes_production
-  username: cadastro_doacoes
-  password: <%= ENV["CADASTRO_DOACOES_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  port: 5432
+

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: Remove link Products" />
+    <list default="true" id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: Remove link Products">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/builds/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/builds/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +196,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724672264089</updated>
-      <workItem from="1724672266817" duration="1452000" />
+      <workItem from="1724672266817" duration="8478000" />
     </task>
     <task id="LOCAL-00008" summary="feat: Remove link Products">
       <option name="closed" value="true" />
@@ -201,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724675891046</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: Remove link Products">
+      <option name="closed" value="true" />
+      <created>1724675921743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724675921743</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +231,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Institution.rcov" NAME="Institution Coverage Results" MODIFIED="1724177907303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
-    <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Cadastro_Doacoes.rcov" NAME="Cadastro_Doacoes Coverage Results" MODIFIED="1724672296111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
+    <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Cadastro_Doacoes.rcov" NAME="Cadastro_Doacoes Coverage Results" MODIFIED="1724691842496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@routes.rcov" NAME="routes Coverage Results" MODIFIED="1724250805716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
   </component>
 </project>
