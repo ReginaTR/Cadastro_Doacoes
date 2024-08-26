@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: Remove link Products">
-      <change beforePath="$PROJECT_DIR$/.idea/Cadastro_Doacoes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Cadastro_Doacoes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-    </list>
+    <list default="true" id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: Remove link Products" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,9 +191,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724672264089</updated>
-      <workItem from="1724672266817" duration="588000" />
+      <workItem from="1724672266817" duration="1452000" />
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: Remove link Products">
+      <option name="closed" value="true" />
+      <created>1724675891046</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724675891046</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
