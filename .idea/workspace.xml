@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: create Products">
-      <change beforePath="$PROJECT_DIR$/.idea/Cadastro_Doacoes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Cadastro_Doacoes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-    </list>
+    <list default="true" id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: Remove link Products" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ReginaTR"
+  }
+}]]></component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="feat: Remove about from Nav" />
+        <option name="rewordedMessage" value="feat: Remove about from Nav" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="9cae2178fdc6bc1a47558b1cdc5009ce92733582" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -25,12 +38,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/11-criar-produtos-e-vincular-as-instituicoes" />
-                    <option name="lastUsedInstant" value="1724358869" />
+                    <option name="branchName" value="feature/14-listagem-dos-produtos-relacionados-as-instituicoes" />
+                    <option name="lastUsedInstant" value="1724413787" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1724358868" />
+                    <option name="lastUsedInstant" value="1724413696" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/11-criar-produtos-e-vincular-as-instituicoes" />
+                    <option name="lastUsedInstant" value="1724358869" />
                   </RecentBranch>
                 </list>
               </option>
@@ -41,6 +58,12 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:ReginaTR/Cadastro_Doacoes.git",
+    "accountId": "f885db68-258d-45c8-ba09-5c62dabb72dd"
+  }
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -48,14 +71,62 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2lC7ZkufCz04RbyQBcSSdP0CRKD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "feature/11-criar-produtos-e-vincular-as-instituicoes",
+    "Rails.Cadastro_Doacoes.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/14-listagem-dos-produtos-relacionados-as-instituicoes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "ruby.structure.view.model.defaults.configured": "true"
+    "nodejs_package_manager_path": "yarn",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Cadastro_Doacoes" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="Cadastro_Doacoes" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-RM-241.18034.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="false" RAKE_SPRING_PRE_LOADER_OPTION="false" RAILS_SPRING_PRE_LOADER_OPTION="false" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="feat: create Products">
@@ -66,17 +137,88 @@
       <option name="project" value="LOCAL" />
       <updated>1724361851163</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: update forms Products">
+      <option name="closed" value="true" />
+      <created>1724369095081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724369095081</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: insert filter Products">
+      <option name="closed" value="true" />
+      <created>1724419051142</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724419051142</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Remove about from Nav">
+      <option name="closed" value="true" />
+      <created>1724421914259</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724421914259</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Remove about from Nav">
+      <option name="closed" value="true" />
+      <created>1724421941695</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724421941695</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: Remove about from Nav">
+      <option name="closed" value="true" />
+      <created>1724422086344</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724422086344</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: Remove link Products">
+      <option name="closed" value="true" />
+      <created>1724422135942</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724422135942</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14d309f5-dd48-4d93-a130-a22c46698a65" name="Changes" comment="feat: Remove link Products" />
+      <created>1724672264089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724672264089</updated>
+      <workItem from="1724672266817" duration="1452000" />
+    </task>
+    <task id="LOCAL-00008" summary="feat: Remove link Products">
+      <option name="closed" value="true" />
+      <created>1724675891046</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724675891046</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: rename sign in" />
     <MESSAGE value="feat: create Products" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create Products" />
+    <MESSAGE value="feat: update forms Products" />
+    <MESSAGE value="feat: insert filter Products" />
+    <MESSAGE value="feat: Remove about from Nav" />
+    <MESSAGE value="feat: Remove link Products" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Remove link Products" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Institution.rcov" NAME="Institution Coverage Results" MODIFIED="1724177907303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
-    <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Cadastro_Doacoes.rcov" NAME="Cadastro_Doacoes Coverage Results" MODIFIED="1724357001703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
+    <SUITE FILE_PATH="coverage/Cadastro_Doacoes@Cadastro_Doacoes.rcov" NAME="Cadastro_Doacoes Coverage Results" MODIFIED="1724672296111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
     <SUITE FILE_PATH="coverage/Cadastro_Doacoes@routes.rcov" NAME="routes Coverage Results" MODIFIED="1724250805716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cadastro_Doacoes" />
   </component>
 </project>
