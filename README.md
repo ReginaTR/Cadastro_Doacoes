@@ -1,24 +1,67 @@
-# README
+![Cadastro Doações](readme-files/C_Doacoes.jpeg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running..
 
-Things you may want to cover:
+# Cadastro Doações
 
-* Ruby version
+![Ruby](https://img.shields.io/badge/Ruby-3.3.1-red)
+![Rails](https://img.shields.io/badge/Rails-7.1.3-blue)
 
-* System dependencies
+# Projeto Ruby on Rails desenvolvido para facilitar o cadastro de instituições de caridade e gerenciar uma lista de produtos necessários para doações. O projeto visa conectar doadores às instituições, promovendo um processo eficiente e organizado para atender às necessidades das instituições.
 
-* Configuration
+ ## Configuração
 
-* Database creation
+### RailsUI
 
-* Database initialization
+#### Gemfile
+```
+bundle install
+```
 
-* How to run the test suite
+#### Node.js
+```
+npm install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Instalar RailsUI
+```
+rails railsui:install
+```
 
-* Deployment instructions
+#### Migrar Banco de Dados
+```
+rails db:drop && rails db:create && rails db:migrate && rails db:seed RAILS_ENV=development
+```
 
-* ...
+#### Redis
+```
+redis-server
+```
+
+#### Executando o Servidor
+```
+bin/dev
+```
+
+### Docker
+
+#### Criando
+```
+docker-compose up --build
+```
+
+#### Executando
+```
+docker compose up
+```
+```
+docker-compose run web rails db:create
+```
+```
+docker-compose run web rails db:migrate
+```
+```
+docker-compose run web rspec
+```
+
+
+ 
