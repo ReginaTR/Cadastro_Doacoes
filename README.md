@@ -6,7 +6,7 @@
 ![Ruby](https://img.shields.io/badge/Ruby-3.3.1-red)
 ![Rails](https://img.shields.io/badge/Rails-7.1.3-blue)
 
-#### Projeto Ruby on Rails desenvolvido para facilitar o cadastro de instituições de caridade e gerenciar uma lista de produtos necessários para doações. O projeto visa conectar doadores às instituições, promovendo um processo eficiente e organizado para atender às necessidades das instituições.
+##### Projeto Ruby on Rails desenvolvido para facilitar o cadastro de instituições de caridade e gerenciar uma lista de produtos necessários para doações. O projeto visa conectar doadores às instituições, promovendo um processo eficiente e organizado para atender às necessidades das instituições.
 ![Instituicoes](readme-files/new_institutions.jpg)
 ![Controller](readme-files/controller.jpeg)
 ![Model](readme-files/model.jpg)
